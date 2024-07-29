@@ -2,17 +2,22 @@
 let navItem = document.querySelectorAll('.header .container .navbar a');
 
 window.onload = () => {
+    let foundActive = false;
     navItem.forEach(element => {
-        element.classList.remove('active')
+        element.classList.remove('active');
     });
-
     navItem.forEach(element => {
         if (window.location.pathname.includes(element.getAttribute('href'))) {
-            element.classList.add('active')
+            element.classList.add('active');
+            foundActive = true;
         }
     });
 
-}
+    if (!foundActive) {
+        navItem[0].classList.add('active');
+    }
+};
+
 
 let icon = document.querySelector('.header .container .toggle-menu i');
 let navbar = document.querySelector('.header .container .navbar');
