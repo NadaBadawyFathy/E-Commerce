@@ -1,0 +1,194 @@
+/* Start variables */
+:root {
+    --dark-blue-gray: #2C2D3F;
+    --light-dark-blue-gray: #3D3E4F;
+    --very-light-dark-blue-gray: rgb(183, 120, 242);
+    --very-dark-blue: #1A1A23;
+    --light-pink: #FF72B6;
+    --ghostwhite: ghostwhite;
+    
+}
+/* End variables */
+/* Start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--dark-blue-gray);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    min-height: 85px;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+/* Large */ 
+@media (min-width: 1200px) {
+    .container {
+        width: 75%;
+    }
+}
+/* Start Header */
+.header {
+    margin-top: 40px;
+    background-color: var(--very-dark-blue);
+    position: relative;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .toggle-menu h1 {
+    font-weight: 500;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: var(--light-pink);
+    color: var(--very-dark-blue);
+}
+@media (max-width: 767px) {
+    .header .container .toggle-menu h1 {
+        display: none;
+    }
+}
+.header .container .toggle-menu i {
+    color: var(--ghostwhite);
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .header .container .toggle-menu i {
+        display: block;
+    }
+}
+.header .container .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .header .container .navbar.hidden {
+        display: none;
+    }
+    .header .container .navbar.show {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--very-dark-blue);
+        width: 230px;
+        margin-left: 15px;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 15px 35px 15px 15px;
+    }
+    .header .container .navbar a:hover {
+        margin-left: 20px;
+    }
+}
+.header .container .navbar a {
+    display: inline-block;
+    color: var(--ghostwhite);
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: .3s;
+}
+.header .container .navbar a.active {
+    background-color: var(--light-dark-blue-gray);
+}
+.header .container .cart {
+    color: var(--ghostwhite);
+    position: relative;
+    margin-right: 15px;
+}
+.header .container .cart span {
+    position: absolute;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: var(--light-pink);
+    color: black;
+    top: -17px;
+    font-size: 16px;
+    left: 100%;
+    transform: translateX(-50%);
+}
+/* End Header */
+/* Start Home */
+.home {
+    padding-top: 60px;
+}
+.home .container {
+    display: flex;
+    gap: 50px;
+}
+.home .container .box h1 {
+    color: var(--ghostwhite);
+    font-size: 60px;
+}
+@media (max-width: 500px) {
+    .home .container .box h1 {
+        font-size: 40px;
+    }
+}
+.home .container .box p {
+    color: var(--ghostwhite);
+    line-height: 30px;
+    font-size: 17px;
+}
+.home .container .box a {
+    display: inline-block;
+    background-color: var(--light-pink);
+    padding: 12px 25px;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+}
+.home .container .img {
+    padding: 20px;
+    background-color: var(--light-dark-blue-gray);
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    align-self: flex-start;
+    overflow: hidden;
+}
+@media (max-width: 1200px) {
+    .home .container .img {
+        display: none;
+    }
+}
+.home .container .img img {
+    width: 450px;
+    max-height: 440px;
+    border-radius: 20px;
+}
+/* End Home */
